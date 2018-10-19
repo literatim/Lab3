@@ -47,7 +47,7 @@ namespace Lab3
             } while (Console.ReadLine().Equals("y", StringComparison.OrdinalIgnoreCase));
         }
 
-        private static uint GetUserInput()
+        public static uint GetUserInput()
         {
             uint input;
             while (!uint.TryParse(Console.ReadLine(), out input) && input < 100)
