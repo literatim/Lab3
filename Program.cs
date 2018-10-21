@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab3
 {
@@ -15,8 +11,15 @@ namespace Lab3
                 Console.Write("Enter your name: ");
                 var userName = Console.ReadLine();
                 Console.WriteLine($"Hello, {userName}. Enter a number between 1 and 100: ");
+
+                // James - I really like that your GetUserInput(), it seperates validation from 
+                // the business logic if you will.  
                 var num = GetUserInput();
 
+                // James - I like that your if statements are on seperate lines, makes it way easier to ready,
+                // although I have to WARN you, with your current logic, you will repeat messages for sure, because these
+                // are just if statements, what if you don't want one of these conditions to fire off? I garuntee
+                // that one of these at least will double message ;)
                 if (num % 2 != 0)
                 {
                     Console.WriteLine($"{num} and Odd.");
